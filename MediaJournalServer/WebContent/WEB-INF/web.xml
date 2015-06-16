@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  
+  <servlet-mapping>
+  	<servlet-name>Servlet</servlet-name>
+  	<url-pattern>/servlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  	<welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<display-name>Servlet</display-name>
+  	<servlet-name>Servlet</servlet-name>
+  	<servlet-class>servlet.Servlet</servlet-class>
+  </servlet><resource-ref>
+  	<description>Database Connection</description>
+  	<res-ref-name>jdbc/mediajournal</res-ref-name>
+  	<res-type>javax.sql.DataSource</res-type>
+  	<res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+  	<display-name>Input</display-name>
+	<servlet-name>Input</servlet-name>
+	<servlet-class>servlet.Input</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Input</servlet-name>
+  	<url-pattern>/input</url-pattern>
+  </servlet-mapping>
+</web-app>
